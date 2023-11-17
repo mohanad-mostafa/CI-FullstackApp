@@ -28,13 +28,13 @@ jobs:
           node-version: ${{matrix.node-version}}
         
       # Install the dependencies.
-      - run: npm install npm install --prefix backend
+      - run: cd backend && npm install
         
       # Run the tests.
-      - run: npm test --prefix backend
+      - run: cd backend && npm test
     
       # Run the linter.
-      - run: npm run lint --prefix backend
+      - run: cd backend && npm run lint
     
       # Send a console message at completion.
       - run: 
