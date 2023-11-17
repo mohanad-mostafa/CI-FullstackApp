@@ -31,10 +31,10 @@ jobs:
       - run: npm install npm install --prefix backend
         
       # Run the tests.
-      - run: npm test
+      - run: npm test --prefix backend
     
       # Run the linter.
-      - run: npm run lint
+      - run: npm run lint --prefix backend
     
       # Send a console message at completion.
       - run: 
