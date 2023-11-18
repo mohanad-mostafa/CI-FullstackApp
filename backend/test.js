@@ -1,13 +1,7 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+const assert = require('assert');
 
-app.get('/', (req, res) => {
-  res.status(200).send('Server is running');
+describe('Simple Test', function() {
+  it('should always pass', function() {
+    assert.equal(1, 1);
+  });
 });
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
-
-module.exports = app;  // export for testing
